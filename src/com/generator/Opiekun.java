@@ -17,7 +17,7 @@ public class Opiekun
     public String toString() {
         StringBuilder insert = new StringBuilder();
         insert.append("INSERT INTO OPIEKUN VALUES(");
-        insert.append(ID_Opiekun + ",'" + Imie + "','" + Nazwisko + "'," + ID_Wydzial + "," + Nr_Pokoju + "," + Nr_Telefonu + ",'" + Adres_Email + "')");
+        insert.append(ID_Opiekun + ",'" + Imie + "','" + Nazwisko + "'," + ID_Wydzial + "," + Nr_Pokoju + "," + Nr_Telefonu + ",'" + Adres_Email + "');");
         String output = insert.toString();
         return output;
     }

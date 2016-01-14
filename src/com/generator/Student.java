@@ -25,14 +25,37 @@ public class Student
     private int ID_Opiekun;
     private int ID_Wynajem;
 
+    private int rokUrodzenia;
+    private int rokRozpoczecia;
+
     @Override
     public String toString() {
         StringBuilder insert = new StringBuilder();
         insert.append("INSERT INTO STUDENT VALUES(");
-
-        insert.append(")");
+        insert.append(ID_Student + ",'" + Imie + "','" + Nazwisko + "'," + ID_Adres + ",'" + Data_Urodzenia + "',");
+        insert.append("'" + Plec +"'," + ID_Typ_Studiow + "," + ID_Tryb_Studiow + ",'" + Narodowosc + "','" + Palacz + "',");
+        insert.append("'" + Nr_Telefonu + "','" + Adres_Email + "','" + Wymagania + "','" + Status_Przydzialu + "',");
+        insert.append(ID_Kierunek + ",'" + Data_Rozpoczecia + "','" + Data_Zakonczenia + "'," + ID_Opiekun + "," + "NULL");
+        insert.append(");");
         String output = insert.toString();
         return output;
+    }
+
+    public static String toStringUpdate(int idStudent, int idWynajem)
+    {
+        StringBuilder insert = new StringBuilder();
+        insert.append("UPDATE STUDENT SET ID_Wynajem = " + idWynajem);
+        insert.append("WHERE ID_Student = " + idStudent + ";");
+        String output = insert.toString();
+        return output;
+    }
+
+    public int getID_Student() {
+        return ID_Student;
+    }
+
+    public void setID_Student(int ID_Student) {
+        this.ID_Student = ID_Student;
     }
 
     public String getImie() {
@@ -65,6 +88,8 @@ public class Student
 
     public void setData_Urodzenia(String data_Urodzenia) {
         Data_Urodzenia = data_Urodzenia;
+        rokUrodzenia = Integer.parseInt(data_Urodzenia.substring(0,4));
+        rokRozpoczecia = 19 + rokUrodzenia;
     }
 
     public char getPlec() {
@@ -177,5 +202,21 @@ public class Student
 
     public void setID_Wynajem(int ID_Wynajem) {
         this.ID_Wynajem = ID_Wynajem;
+    }
+
+    public int getRokUrodzenia() {
+        return rokUrodzenia;
+    }
+
+    public void setRokUrodzenia(int rokUrodzenia) {
+        this.rokUrodzenia = rokUrodzenia;
+    }
+
+    public int getRokRozpoczecia() {
+        return rokRozpoczecia;
+    }
+
+    public void setRokRozpoczecia(int rokRozpoczecia) {
+        this.rokRozpoczecia = rokRozpoczecia;
     }
 }

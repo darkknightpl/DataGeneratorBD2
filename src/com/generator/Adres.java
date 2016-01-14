@@ -18,7 +18,7 @@ public class Adres
     {
         StringBuilder insert = new StringBuilder();
         insert.append("INSERT INTO ADRES VALUES(");
-        insert.append(ID_Adres + ",'" + Ulica +"'," + Numer_Domu + "," + Numer_Mieszkania + ",'" + Kod_Pocztowy + "','" + Miasto + "','" + Kraj + "')");
+        insert.append(ID_Adres + ",'" + Ulica +"'," + Numer_Domu + "," + Numer_Mieszkania + ",'" + Kod_Pocztowy + "','" + Miasto + "','" + Kraj + "');");
         String output = insert.toString();
         return output;
     }

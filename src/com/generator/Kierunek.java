@@ -14,7 +14,7 @@ public class Kierunek
     public String toString() {
         StringBuilder insert = new StringBuilder();
         insert.append("INSERT INTO KIERUNEK VALUES(");
-        insert.append(ID_Kierunek + ",'" + Nazwa + "'," + ID_Wydzial + ")");
+        insert.append(ID_Kierunek + ",'" + Nazwa + "'," + ID_Wydzial + ");");
         String output = insert.toString();
         return output;
     }

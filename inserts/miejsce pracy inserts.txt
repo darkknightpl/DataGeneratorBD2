@@ -1,0 +1,2 @@
+INSERT INTO MIEJSCE_PRACY VALUES(1,'biuro mieszkaniowe');
+INSERT INTO MIEJSCE_PRACY VALUES(2,'akademik');

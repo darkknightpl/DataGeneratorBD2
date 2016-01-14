@@ -15,7 +15,7 @@ public class Wydzial
     {
         StringBuilder insert = new StringBuilder();
         insert.append("INSERT INTO WYDZIAL VALUES(");
-        insert.append(ID_Wydzial + ",'" + Nazwa + "'," + ID_Adres + "," + ID_Uczelnia + ")");
+        insert.append(ID_Wydzial + ",'" + Nazwa + "'," + ID_Adres + "," + ID_Uczelnia + ");");
         String output = insert.toString();
         return output;
     }
