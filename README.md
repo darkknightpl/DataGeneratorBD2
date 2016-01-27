@@ -10,6 +10,7 @@
 - kierunki
 - tryby studiów
 - typy studiów
+- opiekunowie
 - studenci
 - krewni
 - stanowiska
@@ -19,4 +20,6 @@
 - mieszkania
 - pokoje akademiki
 - pokoje mieszkania
+- wynajmy
+- faktury
 - ...
