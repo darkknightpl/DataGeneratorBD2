@@ -18,7 +18,18 @@ public class Faktura
         StringBuilder insert = new StringBuilder();
         insert.append("INSERT INTO SPRZATANIE VALUES(");
         insert.append(ID_Faktura + "," + ID_Wynajem + "," + Semestr + "," + Kwota + ",");
-        insert.append("'" + Oplacona + "','" + Data_Upomnienia1 + "','" + Data_Upomnienia2 + "'");
+        insert.append("'" + Oplacona + "',");
+
+        if(Data_Upomnienia1.equals("NULL"))
+            insert.append(Data_Upomnienia1 + ",");
+        else
+            insert.append("'" + Data_Upomnienia1 + "',");
+
+        if(Data_Upomnienia2.equals("NULL"))
+            insert.append(Data_Upomnienia2);
+        else
+            insert.append("'" + Data_Upomnienia1 + "'");
+
         insert.append(");");
         String output = insert.toString();
         return output;

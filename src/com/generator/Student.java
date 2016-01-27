@@ -45,7 +45,7 @@ public class Student
     {
         StringBuilder insert = new StringBuilder();
         insert.append("UPDATE STUDENT SET ID_Wynajem = " + idWynajem);
-        insert.append("WHERE ID_Student = " + idStudent + ";");
+        insert.append(" WHERE ID_Student = " + idStudent + ";");
         String output = insert.toString();
         return output;
     }
