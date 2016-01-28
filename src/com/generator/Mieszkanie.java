@@ -15,7 +15,8 @@ public class Mieszkanie
     public String toString() {
         StringBuilder insert = new StringBuilder();
         insert.append("INSERT INTO MIESZKANIE VALUES(");
-        insert.append(ID_Mieszkanie + "," + ID_Adres + "," + Liczba_Pokoi + ",'" + Stan_Wyposazenia + "','" + Data_Remontu + "'");
+        insert.append(ID_Mieszkanie + "," + ID_Adres + "," + Liczba_Pokoi + ",'" + Stan_Wyposazenia + "',");
+        insert.append("TO_DATE('" + Data_Remontu + "','YYYY-MM-DD')");
         insert.append(");");
         String output = insert.toString();
         return output;

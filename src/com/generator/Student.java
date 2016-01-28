@@ -32,10 +32,10 @@ public class Student
     public String toString() {
         StringBuilder insert = new StringBuilder();
         insert.append("INSERT INTO STUDENT VALUES(");
-        insert.append(ID_Student + ",'" + Imie + "','" + Nazwisko + "'," + ID_Adres + ",'" + Data_Urodzenia + "',");
+        insert.append(ID_Student + ",'" + Imie + "','" + Nazwisko + "'," + ID_Adres + ",TO_DATE('" + Data_Urodzenia + "','YYYY-MM-DD'),");
         insert.append("'" + Plec +"'," + ID_Typ_Studiow + "," + ID_Tryb_Studiow + ",'" + Narodowosc + "','" + Palacz + "',");
         insert.append("'" + Nr_Telefonu + "','" + Adres_Email + "','" + Wymagania + "','" + Status_Przydzialu + "',");
-        insert.append(ID_Kierunek + ",'" + Data_Rozpoczecia + "','" + Data_Zakonczenia + "'," + ID_Opiekun + "," + "NULL");
+        insert.append(ID_Kierunek + ",TO_DATE('" + Data_Rozpoczecia + "','YYYY-MM-DD'),TO_DATE('" + Data_Zakonczenia + "','YYYY-MM-DD')," + ID_Opiekun + "," + "NULL");
         insert.append(");");
         String output = insert.toString();
         return output;

@@ -24,7 +24,7 @@ public class Pracownik
         StringBuilder insert = new StringBuilder();
         insert.append("INSERT INTO PRACOWNIK VALUES(");
         insert.append(ID_Pracownik + ",'" + Imie + "','" + Nazwisko + "'," + ID_Adres + "," + ID_Stanowisko + ",");
-        insert.append(Nr_Telefonu + ",'" + Adres_Email + "','" + Data_Urodzenia + "','" + Plec + "',");
+        insert.append(Nr_Telefonu + ",'" + Adres_Email + "',TO_DATE('" + Data_Urodzenia + "','YYYY-MM-DD'),'" + Plec + "',");
         insert.append(ID_Miejsce_Pracy + "," + ID_Przelozony);
         insert.append(");");
         String output = insert.toString();

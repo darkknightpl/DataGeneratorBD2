@@ -19,7 +19,7 @@ public class PokojAkademik
         StringBuilder insert = new StringBuilder();
         insert.append("INSERT INTO POKOJ_AKADEMIK VALUES(");
         insert.append(ID_Pokoj + "," + Nr_Pokoju + "," + Czynsz + "," + ID_Akademik + "," + Nr_Pietra + "," + Nr_Wewnetrzny + ",");
-        insert.append("'" + Data_Remontu + "','" + Stan_Wyposazenia + "'");
+        insert.append("TO_DATE('" + Data_Remontu + "','YYYY-MM-DD'),'" + Stan_Wyposazenia + "'");
         insert.append(");");
         String output = insert.toString();
         return output;

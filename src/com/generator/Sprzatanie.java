@@ -17,7 +17,7 @@ public class Sprzatanie
         StringBuilder insert = new StringBuilder();
         insert.append("INSERT INTO SPRZATANIE VALUES(");
         insert.append(ID_Sprzatanie + "," + ID_Pracownik + "," + ID_Mieszkanie + ",");
-        insert.append("'" + Data + "','" + Usterki + "','" + Uwagi + "'");
+        insert.append("TO_DATE('" + Data + "','YYYY-MM-DD'),'" + Usterki + "','" + Uwagi + "'");
         insert.append(");");
         String output = insert.toString();
         return output;

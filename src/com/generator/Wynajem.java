@@ -14,8 +14,8 @@ public class Wynajem
     @Override
     public String toString() {
         StringBuilder insert = new StringBuilder();
-        insert.append("INSERT INTO SPRZATANIE VALUES(");
-        insert.append(ID_Wynajem + "," + Okres_Najmu + "," + ID_Student + "," + ID_Pokoj + ",'" + Data_Opuszczenia + "'");
+        insert.append("INSERT INTO WYNAJEM VALUES(");
+        insert.append(ID_Wynajem + "," + Okres_Najmu + "," + ID_Student + "," + ID_Pokoj + ",TO_DATE('" + Data_Opuszczenia + "','YYYY-MM-DD')");
         insert.append(");");
         String output = insert.toString();
         return output;
