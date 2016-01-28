@@ -14,6 +14,9 @@ import java.util.Scanner;
 
 public class Generator
 {
+
+    public final static int liczbaSprzatan = 400;
+
     public final static int liczbaWynajmow = 3500;
     public final static int liczbaFaktur = liczbaWynajmow;
 
@@ -46,20 +49,20 @@ public class Generator
         Generator generator = new Generator();
         System.out.println("Generator danych");
 
-        generator.wczytajImionaNazwiska();
-        generator.generujAdresy();
-        generator.generujWydzialy();
-        generator.generujKierunki();
-        generator.generujOpiekunow();
-        generator.generujStudentow();
-        generator.generujKrewnych();
-        generator.generujPracownikow();
-        generator.generujAkademiki();
-        generator.generujMieszkania();
-        generator.generujPokojeAkademik();
-        generator.generujPokojeMieszkanie();
-        generator.generujWynajmy();
-        generator.generujFaktury();
+//        generator.wczytajImionaNazwiska();
+//        generator.generujAdresy();
+//        generator.generujWydzialy();
+//        generator.generujKierunki();
+//        generator.generujOpiekunow();
+//        generator.generujStudentow();
+//        generator.generujKrewnych();
+//        generator.generujPracownikow();
+//        generator.generujAkademiki();
+//        generator.generujMieszkania();
+//        generator.generujPokojeAkademik();
+//        generator.generujPokojeMieszkanie();
+//        generator.generujWynajmy();
+//        generator.generujFaktury();
         generator.generujSprzatania();
         generator.generujKontrole();
 
@@ -86,11 +89,29 @@ public class Generator
         Random rand = new Random();
         Sprzatanie sprzatanie = new Sprzatanie();
 
-        // TODO: 2016-01-13
-
+        for(int j = 0; j < 4; j++)
+        {
+            if(j == 0)
+                sprzatanie.setData("2015-10-31");
+            else if (j == 1)
+                sprzatanie.setData("2015-11-28");
+            else if (j == 2)
+                sprzatanie.setData("2015-12-19");
+            else
+                sprzatanie.setData("2016-01-23");
+            for (int i = 1; i <= liczbaMieszkan; i++)
+            {
+                sprzatanie.setID_Sprzatanie(i);
+                sprzatanie.setID_Pracownik(32 + rand.nextInt(20));
+                sprzatanie.setID_Mieszkanie(i);
+                sprzatanie.setUsterki("brak");
+                sprzatanie.setUwagi("brak");
+                outFile.println(sprzatanie.toString());
+            }
+        }
         outFile.flush();
         outFile.close();
-        //System.out.println("Wygenerowano sprzatania.");
+        System.out.println("Wygenerowano sprzatania.");
         return;
     }
 
