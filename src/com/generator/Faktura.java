@@ -23,12 +23,12 @@ public class Faktura
         if(Data_Upomnienia1.equals("NULL"))
             insert.append(Data_Upomnienia1 + ",");
         else
-            insert.append("TO_DATE('" + Data_Upomnienia1 + "','YYYY-MM-DD')");
+            insert.append("TO_DATE('" + Data_Upomnienia1 + "','YYYY-MM-DD'),");
 
         if(Data_Upomnienia2.equals("NULL"))
             insert.append(Data_Upomnienia2);
         else
-            insert.append("TO_DATE('" + Data_Upomnienia2 + "','YYYY-MM-DD')");
+            insert.append("TO_DATE('" + Data_Upomnienia2 + "','YYYY-MM-DD'),");
 
         insert.append(");");
         String output = insert.toString();
