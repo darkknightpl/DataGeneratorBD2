@@ -1,2 +1,2 @@
-INSERT INTO UCZELNIA VALUES(1,'Politechnika Warszawska',1);
-INSERT INTO UCZELNIA VALUES(2,'Uniwersytet Warszawski',2);
+INSERT INTO UCZELNIA VALUES(1,'Politechnika',1);
+INSERT INTO UCZELNIA VALUES(2,'Uniwersytet',2);
