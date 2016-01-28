@@ -47,21 +47,21 @@ public class Generator
         System.out.println("Generator danych");
 
         generator.wczytajImionaNazwiska();
-        //generator.generujAdresy();
-        //generator.generujWydzialy();
-        //generator.generujKierunki();
-        //generator.generujOpiekunow();
-        //generator.generujStudentow();
-        //generator.generujKrewnych();
-        //generator.generujPracownikow();
-        //generator.generujAkademiki();
-        //generator.generujMieszkania();
-        //generator.generujPokojeAkademik();
-        //generator.generujPokojeMieszkanie();
-        //generator.generujWynajmy();
+        generator.generujAdresy();
+        generator.generujWydzialy();
+        generator.generujKierunki();
+        generator.generujOpiekunow();
+        generator.generujStudentow();
+        generator.generujKrewnych();
+        generator.generujPracownikow();
+        generator.generujAkademiki();
+        generator.generujMieszkania();
+        generator.generujPokojeAkademik();
+        generator.generujPokojeMieszkanie();
+        generator.generujWynajmy();
         generator.generujFaktury();
-        //generator.generujSprzatania();
-        //generator.generujKontrole();
+        generator.generujSprzatania();
+        generator.generujKontrole();
 
         System.out.println("Koniec.");
     }
