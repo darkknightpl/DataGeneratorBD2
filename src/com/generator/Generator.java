@@ -51,17 +51,17 @@ public class Generator
         //generator.generujWydzialy();
         //generator.generujKierunki();
         //generator.generujOpiekunow();
-        generator.generujStudentow();
+        //generator.generujStudentow();
         //generator.generujKrewnych();
-        generator.generujPracownikow();
+        //generator.generujPracownikow();
         //generator.generujAkademiki();
-        generator.generujMieszkania();
-        generator.generujPokojeAkademik();
+        //generator.generujMieszkania();
+        //generator.generujPokojeAkademik();
         //generator.generujPokojeMieszkanie();
-        generator.generujWynajmy();
+        //generator.generujWynajmy();
         generator.generujFaktury();
-        generator.generujSprzatania();
-        generator.generujKontrole();
+        //generator.generujSprzatania();
+        //generator.generujKontrole();
 
         System.out.println("Koniec.");
     }
