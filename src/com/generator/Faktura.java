@@ -16,7 +16,7 @@ public class Faktura
     @Override
     public String toString() {
         StringBuilder insert = new StringBuilder();
-        insert.append("INSERT INTO SPRZATANIE VALUES(");
+        insert.append("INSERT INTO FAKTURA VALUES(");
         insert.append(ID_Faktura + "," + ID_Wynajem + "," + Semestr + "," + Kwota + ",");
         insert.append("'" + Oplacona + "',");
 
