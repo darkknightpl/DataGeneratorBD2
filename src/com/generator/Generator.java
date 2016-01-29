@@ -49,20 +49,20 @@ public class Generator
         Generator generator = new Generator();
         System.out.println("Generator danych");
 
-//        generator.wczytajImionaNazwiska();
-//        generator.generujAdresy();
-//        generator.generujWydzialy();
-//        generator.generujKierunki();
-//        generator.generujOpiekunow();
-//        generator.generujStudentow();
-//        generator.generujKrewnych();
-//        generator.generujPracownikow();
-//        generator.generujAkademiki();
-//        generator.generujMieszkania();
-//        generator.generujPokojeAkademik();
-//        generator.generujPokojeMieszkanie();
-//        generator.generujWynajmy();
-//        generator.generujFaktury();
+        generator.wczytajImionaNazwiska();
+        generator.generujAdresy();
+        generator.generujWydzialy();
+        generator.generujKierunki();
+        generator.generujOpiekunow();
+        generator.generujStudentow();
+        generator.generujKrewnych();
+        generator.generujPracownikow();
+        generator.generujAkademiki();
+        generator.generujMieszkania();
+        generator.generujPokojeAkademik();
+        generator.generujPokojeMieszkanie();
+        generator.generujWynajmy();
+        generator.generujFaktury();
         generator.generujSprzatania();
         generator.generujKontrole();
 
@@ -148,12 +148,11 @@ public class Generator
         Random rand = new Random();
         Wynajem wynajem = new Wynajem();
 
-
-
         for(int i = 1; i <= liczbaWynajmow; i++)
         {
             wynajem.setID_Wynajem(i);
             wynajem.setOkres_Najmu(2);
+            wynajem.setID_Student(i);
             wynajem.setID_Pokoj(i);
             wynajem.setData_Opuszczenia("2016-08-31");
             outFile.println(wynajem.toString());
