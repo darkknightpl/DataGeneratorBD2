@@ -14,9 +14,6 @@ import java.util.Scanner;
 
 public class Generator
 {
-
-    public final static int liczbaSprzatan = 400;
-
     public final static int liczbaWynajmow = 3500;
     public final static int liczbaFaktur = liczbaWynajmow;
 
@@ -32,7 +29,8 @@ public class Generator
     public final static int liczbaPracownikow = liczbaDyrektorow + liczbaKierownikow + liczbaTechnicznych + liczbaSprzataczek;
 
     public final static int liczbaStudentow = 4000;
-
+    public final static int liczbaSprzatan = 400;
+    public final static int liczbaKontrolii = 100;
     public final static int liczbaUczelni = 2;
     public final static int liczbaWydzialow = 40;
     public final static int liczbaKierunkow = liczbaWydzialow*20;
@@ -69,19 +67,7 @@ public class Generator
         System.out.println("Koniec.");
     }
 
-    public void generujKontrole()
-    {
-        PrintWriter outFile = openFile("kontrole inserts.txt");;
-        Random rand = new Random();
-        KontrolaMieszkan kontrolaMieszkan = new KontrolaMieszkan();
 
-        // TODO: 2016-01-13
-
-        outFile.flush();
-        outFile.close();
-        //System.out.println("Wygenerowano kontrole.");
-        return;
-    }
 
     public void generujSprzatania()
     {
@@ -461,6 +447,29 @@ public class Generator
         return;
     }
 
+    public void generujKontrole()
+    {
+        PrintWriter outFile = openFile("kontrole inserts.txt");;
+        Random rand = new Random();
+        KontrolaMieszkan kontrolaMieszkan = new KontrolaMieszkan();
+
+        for(int i = 1; i <= liczbaKontrolii; i++)
+        {
+            kontrolaMieszkan.setID_Mieszkanie(i);
+            kontrolaMieszkan.setID_Pracownik(12 + rand.nextInt(20));
+            kontrolaMieszkan.setData("2015-11-28");
+            kontrolaMieszkan.setID_Mieszkanie(i);
+            kontrolaMieszkan.setOcena("bardzo dobra");
+            kontrolaMieszkan.setUwagi("brak");
+            outFile.println(kontrolaMieszkan.toString());
+        }
+
+        outFile.flush();
+        outFile.close();
+        System.out.println("Wygenerowano kontrole.");
+        return;
+    }
+
     public static String generujDate(int rokMin, int rokMax)
     {
         StringBuilder randomDate = new StringBuilder();
@@ -506,6 +515,8 @@ public class Generator
         }
         return outFile;
     }
+
+
 
     public void wczytajImionaNazwiska()
     {
