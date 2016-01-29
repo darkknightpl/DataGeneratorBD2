@@ -18,7 +18,7 @@ public class KontrolaMieszkan
         insert.append("INSERT INTO KONTROLA_MIESZKAN VALUES(");
         insert.append(ID_Kontrola + "," + ID_Pracownik + ",");
         insert.append("TO_DATE('" + Data + "','YYYY-MM-DD')," + ID_Mieszkanie + ",");
-        insert.append("'" + Ocena + "','" + Uwagi);
+        insert.append("'" + Ocena + "','" + Uwagi + "'");
         insert.append(");");
         String output = insert.toString();
         return output;

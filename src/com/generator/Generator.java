@@ -47,21 +47,21 @@ public class Generator
         Generator generator = new Generator();
         System.out.println("Generator danych");
 
-        generator.wczytajImionaNazwiska();
-        generator.generujAdresy();
-        generator.generujWydzialy();
-        generator.generujKierunki();
-        generator.generujOpiekunow();
-        generator.generujStudentow();
-        generator.generujKrewnych();
-        generator.generujPracownikow();
-        generator.generujAkademiki();
-        generator.generujMieszkania();
-        generator.generujPokojeAkademik();
-        generator.generujPokojeMieszkanie();
-        generator.generujWynajmy();
-        generator.generujFaktury();
-        generator.generujSprzatania();
+//        generator.wczytajImionaNazwiska();
+//        generator.generujAdresy();
+//        generator.generujWydzialy();
+//        generator.generujKierunki();
+//        generator.generujOpiekunow();
+//        generator.generujStudentow();
+//        generator.generujKrewnych();
+//        generator.generujPracownikow();
+//        generator.generujAkademiki();
+//        generator.generujMieszkania();
+//        generator.generujPokojeAkademik();
+//        generator.generujPokojeMieszkanie();
+//        generator.generujWynajmy();
+//        generator.generujFaktury();
+//        generator.generujSprzatania();
         generator.generujKontrole();
 
         System.out.println("Koniec.");
@@ -455,6 +455,7 @@ public class Generator
 
         for(int i = 1; i <= liczbaKontrolii; i++)
         {
+            kontrolaMieszkan.setID_Kontrola(i);
             kontrolaMieszkan.setID_Mieszkanie(i);
             kontrolaMieszkan.setID_Pracownik(12 + rand.nextInt(20));
             kontrolaMieszkan.setData("2015-11-28");
