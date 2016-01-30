@@ -58,11 +58,11 @@ public class Generator
 //        generator.generujAkademiki();
 //        generator.generujMieszkania();
 //        generator.generujPokojeAkademik();
-//        generator.generujPokojeMieszkanie();
+        generator.generujPokojeMieszkanie();
 //        generator.generujWynajmy();
 //        generator.generujFaktury();
 //        generator.generujSprzatania();
-        generator.generujKontrole();
+//        generator.generujKontrole();
 
         System.out.println("Koniec.");
     }
@@ -156,13 +156,13 @@ public class Generator
         Random rand = new Random();
         PokojMieszkanie pokojMieszkanie = new PokojMieszkanie();
 
-        for(int i = 1 + liczbaPokojowAkademik; i <= liczbaPokojeMieszkanie + liczbaPokojowAkademik; i++)
+        for(int i = 1 + liczbaPokojowAkademik, j = 1; i <= liczbaPokojeMieszkanie + liczbaPokojowAkademik; i++, j++)
         {
             pokojMieszkanie.setID_Pokoj(i);
             int nrPokoju = i % 5; if(nrPokoju == 0) nrPokoju = 5;
             pokojMieszkanie.setNr_Pokoju(nrPokoju);
             pokojMieszkanie.setCzynsz(432.12);
-            int nrMieszkania = i/5 + 1; if(nrPokoju == 5) nrMieszkania--;
+            int nrMieszkania = j/5 + 1; if(nrPokoju == 5) nrMieszkania--;
             pokojMieszkanie.setID_Mieszkanie(nrMieszkania);
             outFile.println(pokojMieszkanie.toString());
         }
